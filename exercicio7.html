@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade Algoritmos</title>
+    </head>
+    <body>
+        <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+        <h2>Exercício 7</h2>
+        <h6>Data: 18/08/2022</h6>
+        <br>
+        <p>Digite o valor da passagem de ônibus:</p>
+        <input id="valor_onibus" type="number">
+        <p>Digite a quantidade de viagens que você faz por mês:</p>
+        <input id="qtd_viagens" type="number">
+        <p>Digite distância entre seu trabalho e sua casa (em km): </p>
+        <input id="distancia_km" type="number">
+        <br>
+        <p>
+            <button onclick="calcular_VT()">Calcular VT</button>
+        </p>
+        <div id="resultado_VT">
+        </div>        
+    </body>
+    </html>
+    
+    <script>
+
+        function calcular_VT(){
+
+            var preco_viagensUber = 0.75 * Number(distancia_km.value) * (Number(qtd_viagens.value) * 0.10)
+            var preco_viagensOnibus = (Number(valor_onibus.value) * Number(qtd_viagens.value)) - preco_viagensUber
+            var total = preco_viagensUber + preco_viagensOnibus
+
+            resultado_VT.innerHTML =
+            `
+                Você vai gastar R$ ${total.toFixed(2)}
+            `
+        }
+    </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 12</h2>
+    <h6>Data: 25/08/2022</h6>
+    <br>
+    <h3>Para calcular a potência de um número:</h3>
+    <p>Digite um número:</p>
+    <input id="input_n1" type="number">
+    <p>Digite outro número:</p>
+    <input id="input_n2" type="number">
+    <br>
+    <br>
+    <button onclick="calcular_potencia()">Calcular Potência</button>
+    <br>
+    <br>
+    <div id="resultado_potencia"></div>
+</body>
+</html>
+
+<script>
+    function calcular_potencia(){
+        var pot = Number(input_n1.value)**Number(input_n2.value);
+
+        resultado_potencia.innerHTML =
+        `
+            ${input_n1.value} elevado a ${input_n2.value} dá ${pot}. 
+        `
+    }
+</script>

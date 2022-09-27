@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 4</h2>
+
+    <p>Quantidade de votos que o "Candidato A" teve na eleição: </p> 
+    <input id="input_qtdVotosA">
+
+    <p>Quantidade de votos que o "Candidato B" teve na eleição: </p> 
+    <input id="input_qtdVotosB">
+
+    <p>Quantidade de votos em branco da eleição: </p> 
+    <input id="input_qtdVotosBranco">
+
+    <p>Quantidade de votos nulos da eleição: </p> 
+    <input id="input_qtdVotosNulo">
+
+    <br>
+    <br>
+    <button onclick="resultado_eleicao()">Resultado da Eleição</button>
+
+    <br>
+    <br>
+    <div id='resultado_calculo_eleicao'>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function resultado_eleicao(){
+
+        var total = Number(input_qtdVotosA.value) +
+                    Number(input_qtdVotosB.value) + 
+                    Number(input_qtdVotosBranco.value) +
+                    Number(input_qtdVotosNulo.value)
+
+        var total_invalidos = Number(input_qtdVotosBranco.value) + Number(input_qtdVotosNulo.value)
+        
+        resultado_calculo_eleicao.innerHTML = 
+        "<b>Total de votos: </b>" + "<b><u>" + total + "</b></u>" +
+        "<br> <b>Candidato A:</b> " + ((100 * Number(input_qtdVotosA.value)) / total).toFixed(2) + 
+        "% (" + input_qtdVotosA.value + " votos)" +
+        "<br> <b>Candidato B:</b> " + ((100 * Number(input_qtdVotosB.value)) / total).toFixed(2) +
+        "% (" + input_qtdVotosB.value + " votos)" + "<br> <b>Inválidos:</b> " + 
+        ((100 * total_invalidos) / total).toFixed(2) + "% (" + total_invalidos + " votos)"
+
+
+    }
+</script>

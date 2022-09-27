@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 9</h2>
+    <h6>Data: 22/08/2022</h6>
+    <br>
+    <p>Digite o raio da circunferência:</p>
+    <input id="input_raio" type="number">
+    <br><br>
+    <button onclick="calcular_area()">Calcular Área</button>
+    <br><br>
+    <div id="div_resultado_area"></div>
+</body>
+</html>
+
+<script>
+    function calcular_area(){
+
+        const pi = 3.14
+        var area_circunf = pi * (Number(input_raio.value)**2)
+        div_resultado_area.innerHTML = 
+        `
+            Área da Circunferência: ${area_circunf}
+        `
+    }
+</script>

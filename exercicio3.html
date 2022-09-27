@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 3</h2>
+
+    <p>Quantas horas de sono você dormiu?</p> 
+    <input id="input_hrsSono">
+    <br>
+    <br>
+    <button onclick="calcular_sono()">CALCULAR SONO</button>
+    <br>
+    <br>
+    <div id='resultado_calculo_sono'>
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcular_sono(){
+        resultado_calculo_sono.innerHTML=
+        "Ao dormir " + "<u>" + input_hrsSono.value + "</u>" + " horas, você dormiu:<br>" +
+        "<u>" + (Number(input_hrsSono.value) * 0.05).toFixed(1) + "</u>" + " horas na <b>fase 1</b><br>" +
+        "<u>" + (Number(input_hrsSono.value) * 0.45).toFixed(1) + "</u>" + " horas na <b>fase 2</b><br>" +
+        "<u>" + (Number(input_hrsSono.value) * 0.30).toFixed(1) + "</u>" + " horas na <b>fase 3</b><br>" +
+        "<u>" + (Number(input_hrsSono.value) * 0.20).toFixed(1) + "</u>" + " horas na <b>fase REM</b>"
+    }
+
+</script>

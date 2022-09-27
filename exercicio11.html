@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 11</h2>
+    <h6>Data: 22/08/2022</h6>
+    <br>
+    <p>Digite um número: </p>
+    <input id="numero" type="number">
+    <br>
+    <br>
+    <button onclick="exibir_raiz_quad()">Exibir sua raiz quadrada</button>
+    <br><br>
+    <div id="resultado_raiz_quad"></div>
+    <br>
+    <button onclick="exibir_raiz_cub()">Exibir sua raiz cubica</button>
+    <br><br>
+    <div id="resultado_raiz_cub"></div>
+</body>
+</html>
+
+<script>
+    function exibir_raiz_quad(){
+        var raiz_quadrada = Number(numero.value) ** 1/2
+        resultado_raiz_quad.innerHTML = "Raiz Quadrada: " + raiz_quadrada
+    }
+
+    function exibir_raiz_cub(){
+        var raiz_cubica = Number(numero.value) ** 1/3
+        resultado_raiz_cub.innerHTML = "Raiz Cúbica: " + raiz_cubica
+    }
+</script>

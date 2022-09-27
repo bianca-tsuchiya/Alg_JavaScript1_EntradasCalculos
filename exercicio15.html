@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 15</h2>
+    <h6>Data: 01/09/2022</h6>
+    <br>
+    Valor a vista: <input id='input_valor_vista'>
+    <br><br>
+    Taxa de juros (a.m): <input id="input_taxa_juros">
+    <br><br>
+    Quantidade de Parcelas: <input id="input_qtd_parcelas">
+    <br><br>
+    <button onclick="calcular_prejuizo()">Calcular preju</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calcular_prejuizo() {
+        var valor_vista = Number(input_valor_vista.value)
+        var taxa_juros = Number(input_taxa_juros.value)
+        var qtd_parcelas = Number(input_qtd_parcelas.value)
+
+        var a1 = valor_vista / qtd_parcelas
+        var q = 1 + (taxa_juros / 100)
+        var n = qtd_parcelas
+
+        var soma_termos = (a1 * ((q ** n) - 1)) / (q - 1)
+
+        var b = valor_vista * 0.8
+
+        var c = soma_termos / valor_vista
+
+        div_resultado.innerHTML =
+        ` 
+            Seu carro vai sair por um total de R$${soma_termos}. 
+            Após 1 mês, ele já vai valer só R$${b}. Porque comprou financiado, 
+            vai pagar o correspondente a ${c} carros.
+        `
+
+
+
+        /*
+        Sn = a1 (q n 1)
+               q   1
+        */
+    }
+</script>

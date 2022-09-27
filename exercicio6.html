@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 6</h2>
+    <h6>Data: 18/08/2022</h6>
+    <br>
+    <p>Digite o sabor da pizza que deseja: </p>
+    <input id="sabor_pizza">
+    <p>Digite o preço da pizza que deseja:</p>
+    <input id="preco_pizza" type="number">
+    <p>Digite a quantidade de amigos que comer a pizza:</p>
+    <input id="qtd_amigos" type="number">
+    <p>
+        <button onclick="calc_valor_amigo()">Ver valor por amigo</button>
+    </p>
+    <div id='resultado_valor'>
+    </div>
+</body>
+</html>
+
+<script>
+    function calc_valor_amigo(){
+
+        var valor_caixa = Number(preco_pizza.value) * 0.10
+        var total_amigo = (Number(preco_pizza.value) + valor_caixa) / qtd_amigos.value
+
+        resultado_valor.innerHTML = 
+        `
+            Cada amigo vai colaborar com R$${(total_amigo).toFixed(2)} 
+            para a pizza de ${sabor_pizza.value}.
+        `
+    }
+</script>

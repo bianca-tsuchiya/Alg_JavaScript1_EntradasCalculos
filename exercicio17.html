@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 17</h2>
+    <h6>Data: 25/08/2022</h6>
+    <br> 
+    Valor guardado no cofrinho: R$<span id="span_cofrinho">0.00</span>
+    <br>
+    <p>Digite o valor a ser depositado:</p>
+    <input type="number" id="input_valor_depositado">
+    <br><br>
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="tirar_grana()">Tirar toda a grana</button>
+</body>
+</html>
+
+<script>
+    var valor_depositado = 0
+
+    function depositar(){
+        var valor_depositado = valor_depositado + Number(input_valor_depositado.value)
+        span_cofrinho.innerHTML = valor_depositado
+    }
+
+    function tirar_grana(){
+        valor_depositado = 0
+        span_cofrinho.innerHTML = valor_depositado
+    }
+</script>

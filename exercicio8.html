@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript com entradas e cálculos</h1>
+    <h2>Exercício 8</h2>
+    <h6>Data: 22/08/2022</h6>
+    <br>
+    <p>Digite o "ki base"(força base) do guerreiro Sayajin:</p>
+    <input id='input_ki' type="number">
+    <br>
+    <p>transformar em...</p>
+    <button onclick="SSJ()">SSJ</button>
+    <button onclick="SSJ2()">SSJ2</button>
+    <button onclick="SSJ3()">SSJ3</button>
+    <br>
+    <br>
+    <div id='div_resultado_trasformacao'>
+    </div>
+</body>
+</html>
+
+<script>
+
+    function SSJ(){
+
+        var valor_ki_ssj = Number(input_ki.value) * 50
+        div_resultado_trasformacao.innerHTML =
+        `
+            Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${valor_ki_ssj}.
+        `
+    }
+
+    function SSJ2(){
+
+        var valor_ki_ssj2 = Number(input_ki.value) * 100
+        div_resultado_trasformacao.innerHTML =
+        `
+            Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${valor_ki_ssj2}.
+        `
+    }
+
+    function SSJ3(){
+
+        var valor_ki_ssj3 = Number(input_ki.value) * 200
+        div_resultado_trasformacao.innerHTML =
+        `
+            Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${valor_ki_ssj3}.
+        `
+    }
+</script>
